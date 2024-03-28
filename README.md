@@ -47,3 +47,19 @@ The following is the corresponding JSONL file:
 {"name": "John", "age": 30}
 {"name": "Jane", "age": 25}
 ```
+
+
+#### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant CSV File
+    participant JSONL File
+    User->CSV File: Open CSV file
+    CSV File->User: Read CSV file
+    User->JSONL File: Open JSONL file
+    User->JSONL File: Write JSONL file
+    User->JSONL File: Close JSONL file
+    User->CSV File: Close CSV file
+```
